@@ -5,7 +5,7 @@ view: model_user_predictions {
 
   derived_table: {
     sql:
-     SELECT * FROM ML.EXPLAIN_PREDICT(MODEL retail_banking.fraud_prediction, (
+     SELECT * FROM ML.EXPLAIN_PREDICT(MODEL crimedata.rec_model, (
        SELECT
         {% parameter percent9th %} AS percent_9th,
         {% parameter percentHS %} AS percent_HS,
