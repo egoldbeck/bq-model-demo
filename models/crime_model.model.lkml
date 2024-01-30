@@ -1,4 +1,3 @@
-# Define the database connection to be used for this model.
 connection: "bq-looker-crime"
 
 # include all the views
@@ -19,12 +18,6 @@ include: "/views/**/*.view.lkml"
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: sc_county_education {}
-
-explore: recidivisms {}
-
-explore: sc_recidivism {}
-
-explore: model_data {view_label: "model_data"}
-
-explore: sc_recidivism_rates {}
+explore: model_user_predictions {
+  view_label: "model_user_predictions"
+}
