@@ -10,7 +10,11 @@ view: model_data {
     # Here's what a typical dimension looks like in LookML.
     # A dimension is a groupable field that can be used to filter query results.
     # This dimension will be called "County" in Explore.
-
+  dimension: county_map {
+    type: string
+    map_layer_name: us_counties_fips
+    sql: ${TABLE}.FIPS ;;
+  }
   dimension: county {
     type: string
     sql: ${TABLE}.County ;;
@@ -28,9 +32,7 @@ view: model_data {
   measure: total_fips {
     type: sum
     sql: ${fips} ;;  }
-  measure: average_fips {
-    type: average
-    sql: ${fips} ;;  }
+
 
   dimension: percent_9th {
     type: number
