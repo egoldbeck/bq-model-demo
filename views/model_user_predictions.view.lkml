@@ -15,5 +15,10 @@ view: model_user_predictions {
 
   dimension: predicted_recidivism {
     type: string
-    sql: ${TABLE}.predicted_recidivism ;;
+    sql: SELECT * FROM ML.EXPLAIN_PREDICT(MODEL crime_data.rec_model, (
+       SELECT
+        {% parameter percent9th %} AS percent_9th,
+        {% parameter percentHS %} AS percent_HS,
+        {% parameter percentBA %} AS percent_BA
+      ) ;;
   }}
