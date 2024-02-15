@@ -15,5 +15,5 @@ view: model_user_predictions {
 
   dimension: predicted_recidivism {
     type: string
-    sql:${TABLE}.rec_model )) ;;
+    sql:crime_data.rec_model )) ;;
   }}
