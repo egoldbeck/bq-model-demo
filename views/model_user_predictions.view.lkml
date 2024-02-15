@@ -10,7 +10,6 @@ view: model_user_predictions {
         {% parameter percent9th %} AS percent_9th,
         {% parameter percentHS %} AS percent_HS,
         {% parameter percentBA %} AS percent_BA,
-        001 as id
       ) );;
   }
 
