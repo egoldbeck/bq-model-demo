@@ -15,5 +15,5 @@ view: model_user_predictions {
 
   dimension: predicted_recidivism {
     type: string
-    sql:${TABLE}.predicted_label ) ;;
+    sql:${TABLE}.predicted_label  ;;
   }}
